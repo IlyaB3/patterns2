@@ -49,12 +49,12 @@ public class DataGenerator {
         }
 
         public static RegistrationDto getUser(String status) {
-            var user = new RegistrationDto(getRandomLogin(), getRandomPassword(), status);
+            RegistrationDto user = new RegistrationDto(getRandomLogin(), getRandomPassword(), status);
             return user;
         }
 
         public static RegistrationDto getRegisteredUser(String status) {
-            var registeredUser = getUser(status);
+            RegistrationDto registeredUser = getUser(status);
             sendRequest(registeredUser);
             return registeredUser;
         }
